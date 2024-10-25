@@ -25,11 +25,6 @@ const Contact = () => {
             icon: <FaEnvelope className="text-4xl hover:text-blue-300 transition duration-300" />,
             label: "Email",
           },
-          {
-            href: "/downloads/CV-Carlos-Michael-Barboza.pdf",
-            icon: <TbFileCv className="text-4xl hover:text-blue-300 transition duration-300" />,
-            label: "Descargar CV",
-          },
         ].map(({ href, icon, label }) => (
           <div 
             key={label} 
