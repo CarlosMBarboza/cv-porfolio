@@ -1,4 +1,4 @@
-import MyImage from '../images/98.jpg'; 
+import MyImage from '../images/8888.jpg'; 
 import { titles } from '../Data/Titulos';
 import Carousel from './Carousel';
 import StackItem from './StackItem';
