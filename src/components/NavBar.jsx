@@ -1,10 +1,22 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 function NavBar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <nav className=" p-6 flex justify-between items-center  shadow-lg shadow-black/65 ">
+    <nav className="p-6 flex justify-between items-center shadow-lg shadow-black/65">
       <h1 className="text-white text-2xl font-bold">Carlos Michael Alexander Barboza</h1>
-      <ul className="flex gap-4 mr-5">
+      <div className="md:hidden">
+        <button onClick={toggleMenu} className="text-white focus:outline-none">
+          {isOpen ? '✖' : '☰'}
+        </button>
+      </div>
+      <ul className={`flex-col md:flex-row gap-4 mr-5 ${isOpen ? 'flex' : 'hidden'} md:flex`}>
         <li>
           <Link 
             className="text-white hover:text-blue-300 transition duration-300" 
